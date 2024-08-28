@@ -13,8 +13,14 @@
    - ` -altr `参数表示显示隐藏的文件和修改时间
 5. 退回上一个路径 `cd .. `  
 6. 进入D盘 ` cd D: `
-
-## 二. pip命令类  
+7. ` 文件夹名+/ ` 表示文件夹
+8. 当前目录 ` pwd `
+9. 绝对路径和相对路径
+    - Unix/Linux 系统中的绝对路径：` /home/user/documents/file.txt `
+    - Windows 系统中的绝对路径：` C:\Users\user\Documents\file.txt `
+    - Unix/Linux 系统中的相对路径，当前目录：` documents/file.txt `或者` ./documents/file.txt `，上一级目录 ：` ..\documents\file.txt `
+    - Windows 系统中的相对路径，当前目录：` .\documents\file.txt `，上一级目录 ：` ..\documents\file.txt `
+## 二. pip命令类
 1. 列出所有包 ` pip list `
 2. 查看pip的所有命令 ` pip help `
 3. 列出所有包的版本信息 ` pip freeze `
@@ -30,6 +36,13 @@
 6.  重命名或者移动文件 ` mv file.txt new_file.txt ` ` mv file.txt /path/to/destination/ `
 7.  删除文件 ` rm file.txt `
 8.  ` >> ` 表示追加在文件的末尾
+9.  ` touch filename ` 创建一个空文件，或者更新文件的时间戳
+    - ` -c `如果文件不存在，则不创建
+    - ` -a `之更新访问时间
+    - ` -m `更新修改时间
+    - ` -t `指定一个自定义的时间戳
+    > touch -t 202408281230.00 filename.txt
+10. ` ./app ` 表示运行当前目录下名为 app 的可执行文件。不可以直接执行` app `因为直接执行` app `表示从系统环境目录下寻找app可执行文件，而不会在当前目录下寻找
 
 ## 四. python命令类
 1. 进入python解释器交互模式 ` python `
